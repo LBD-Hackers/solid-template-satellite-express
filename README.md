@@ -17,6 +17,7 @@ Add you solid credentials to the environment.
     "PORT": 3080,
   }
 }```
+
 ## Step 3:
 Run the application
 `npm start`

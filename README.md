@@ -13,7 +13,8 @@ Create a nodemon.json and add your environment variables
 Add you solid credentials to the environment.
 ```{
   "env": {
-    "ACCOUNT": {"email": "schulz@dc.rwth-aachen.de", "password":"login1", "idp":"http://localhost:3000"},
+    "ACCOUNT": {
+    "email": "enter@email.here", "password":"yourpassword", "idp":"http://localhost:3000"},
     "PORT": 3080,
   }
 }

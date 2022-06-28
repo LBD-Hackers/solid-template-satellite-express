@@ -1,0 +1,9 @@
+{
+  "env": {
+    "CONFIG_REFRESH_TOKEN": "eC19taZ90Dub-CZg58Cj3yGh9POMpqmfX2ahlPRi0JJ",
+    "CLIENT_ID": "II0mtDrOLjExbbk9zOZMm",
+    "CLIENT_SECRET": "v4pRr8zzmwreVM7fXeSyn2SFu72xVw2VYnTX2cdvaSlFqP5F0Yo-zkGfg7UTvrZ4aqwSOAjS7_mNVOYrl8rCjQ",
+    "OIDC_ISSUER": "http://localhost:3000/",
+    "PORT": 3080
+  }
+}

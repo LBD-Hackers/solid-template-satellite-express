@@ -14,7 +14,10 @@ Add you solid credentials to the environment.
 ```{
   "env": {
     "ACCOUNT": {
-    "email": "enter@email.here", "password":"yourpassword", "idp":"http://localhost:3000"},
+      "email": "enter@email.here", 
+      "password":"yourpassword",
+      "idp":"http://localhost:3000"
+    },
     "PORT": 3080,
   }
 }

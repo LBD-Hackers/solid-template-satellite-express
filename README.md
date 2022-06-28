@@ -16,7 +16,8 @@ Add you solid credentials to the environment.
     "ACCOUNT": {"email": "schulz@dc.rwth-aachen.de", "password":"login1", "idp":"http://localhost:3000"},
     "PORT": 3080,
   }
-}```
+}
+```
 
 ## Step 3:
 Run the application

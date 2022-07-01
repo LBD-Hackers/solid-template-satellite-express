@@ -1,9 +1,9 @@
 import express from "express";
 import morgan from "morgan";
 //@ts-ignore
-import {setSatellite, extractWebId } from "express-solid-auth-wrapper";
+import { setSatellite, extractWebId } from "express-solid-auth-wrapper";
 
-const TemplateRouter = require("./Router/templateRouter");
+const bcfApiRouter = require("./Router/bcfApiRouter");
 
 // Express Interfaces for TypeScript
 
@@ -25,11 +25,11 @@ interface Response {
 // These variables have to be set up in a nodemon.json
 // if this file does not exist create it in the upmost directory
 const config = {
-  "refreshToken" : process.env.CONFIG_REFRESH_TOKEN,
-  "clientId"     : process.env.CLIENT_ID,
-  "clientSecret" : process.env.CLIENT_SECRET,
-  "oidcIssuer"   : process.env.OIDC_ISSUER,
-}
+  refreshToken: process.env.CONFIG_REFRESH_TOKEN,
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+  oidcIssuer: process.env.OIDC_ISSUER,
+};
 
 const app = express();
 
@@ -54,15 +54,15 @@ app.use((req, res, next) => {
 });
 
 // Set up the connection to Solid
-app.use(setSatellite(config));
+app.use(setSatellite(process.env.ACCOUNT));
 app.use(extractWebId);
 
 // Routes which should handle requests
-app.use("/template", TemplateRouter);
+app.use("/bcf/:version", bcfApiRouter);
 
 // Error Handlers
 app.use((req, res, next) => {
-  const error = new Error ("Not found");
+  const error = new Error("Not found");
   res.status(500).send(error.message);
 });
 
